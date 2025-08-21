@@ -38,7 +38,7 @@ body {
 
 main {
     display: grid; /* Usaremos Grid para o layout desktop */
-    max-width: 635px;
+    width: 343px;
     border-radius: 8px;
     overflow: hidden; /* Garante que o border-radius seja aplicado aos cantos dos filhos */
     box-shadow: 0 15px 30px -10px hsla(218, 22%, 67%, 0.5);
@@ -148,6 +148,7 @@ div.azulclaro p {
 @media screen and (min-width: 768px) {
     main {
        grid-template-columns: 1fr 1fr;
+       width: 635px;
     }
 
     div.branco {
