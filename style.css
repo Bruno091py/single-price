@@ -1,0 +1,161 @@
+/* =================
+   1. Google Fonts
+   ================= */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/* =================
+   2. Custom Properties
+   ================= */
+:root {
+    /* Primary */
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+
+    /* Neutral */
+    --neutral-light-gray: hsl(204, 43%, 93%);
+    --neutral-grayish-blue: hsl(218, 22%, 67%);
+}
+
+/* =================
+   3. General Styling
+   ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    background-color: var(--neutral-light-gray);
+    /* Adicionado para centralizar o componente na tela */
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+main {
+    display: grid; /* Usaremos Grid para o layout desktop */
+    max-width: 635px;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que o border-radius seja aplicado aos cantos dos filhos */
+    box-shadow: 0 15px 30px -10px hsla(218, 22%, 67%, 0.5);
+}
+
+div.branco {
+    background-color: white;
+    padding: 2rem;
+}
+
+div.branco h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-cyan);
+    margin-bottom: 20px;
+}
+
+div.branco span {
+    color: var(--primary-bright-yellow);
+    font-weight: 700;
+}
+
+div.branco p {
+    color: var(--neutral-grayish-blue);
+    font-weight: 500;
+    margin-top: 20px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+div.azulescuro {
+    background-color: var(--primary-cyan);
+    padding: 2rem;
+}
+
+div.azulescuro h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+div.azulescuro strong {
+    color: white;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+div.azulescuro span {
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 14px;
+}
+
+div.azulescuro p {
+    color: rgba(255, 255, 255, 0.788);
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+div.azulescuro button {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.247);
+    background-color: var(--primary-bright-yellow);
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 9px;
+    margin-top: 25px;
+}
+
+div.azulclaro {
+    background-color: hsla(179, 62%, 43%, 0.85); /* Um pouco mais claro que o azul principal */
+    padding: 2rem;
+}
+
+div.azulclaro h1 {
+    color: rgba(255, 255, 255, 0.959);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+div.azulclaro p {
+    color: rgba(255, 255, 255, 0.575);
+    font-size: 16px;
+    margin: 15px 60px 0px 0px;
+    line-height: 1.6;
+}
+
+.attribution {
+    font-size: 12px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--primary-bright-yellow);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--primary-cyan);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+       grid-template-columns: 1fr 1fr;
+    }
+
+    div.branco {
+        grid-column: 1 / -1; /* Ocupa as 2 colunas */
+        padding: 2.5rem;
+    }
+
+    div.azulescuro, div.azulclaro {
+        padding: 2.5rem;
+    }
+}
